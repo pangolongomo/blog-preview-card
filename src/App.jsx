@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styles from "./App.module.scss";
+import illustration from "./assets/images/illustration-article.svg";
+import authorPicture from "./assets/images/image-avatar.webp";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <img className={styles.illustration} src={illustration} alt="illustration" />
+        <div className={styles["card-text"]}>
+          <div className={styles.tags}>
+            <span>Learning</span>
+          </div>
+          <h3>Published 21 Dec 2023</h3>
+          <h2>
+            <a href="#">HTML & CSS foundations</a>
+          </h2>
+          <p>
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+          <div className={styles.author}>
+            <img src={authorPicture} alt="author" />
+            <span>Greg Hooper</span>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Figtree;
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: Figtree;
+  background-color: hsl(47, 88%, 63%);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
